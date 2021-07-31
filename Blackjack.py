@@ -1,7 +1,10 @@
 from art import logo_blackjack
-# from replit import clear
+import os
 import random
-
+def clear():
+    """This function is used to clear the terminal window for a better user experience"""
+    os.system('cls')
+ 
 def deal_card():
     """This function returns a randomly drawn card from a deck of cards"""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -66,6 +69,6 @@ def play_game():
 
 
 while input("Do you want to play a game of Blackjack? Type 'y' for yes or 'n' for no: ") == 'y':
-    # clear()
+    clear()
     play_game()
 print("Thank you for playing!")

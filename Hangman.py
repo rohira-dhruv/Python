@@ -1,14 +1,19 @@
 
 import random
-
+import os
 from data import word_list_hangman
+
+def clear():
+    os.system('cls')
 
 chosen_word = random.choice(word_list_hangman)
 word_length = len(chosen_word)
 
 end_of_game = False
 lives = 6
+
 from art import logo_hangman
+from art import stages_hangman
 print(logo_hangman)
 
 #Create blanks
@@ -18,6 +23,7 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    clear()
 
     if guess in display:
         print(f"You've already guessed {guess}")
@@ -44,5 +50,4 @@ while not end_of_game:
         end_of_game = True
         print("You win.")
 
-    from art import stages_hangman
     print(stages_hangman[lives])

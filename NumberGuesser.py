@@ -1,6 +1,10 @@
 from art import logo_number_guesser
-# from replit import clear
+import os
 import random
+
+def clear():
+    """This function is used to clear the terminal for a better user eperience."""
+    os.system('cls')
 
 def guess(guessed_number, chosen_number):
     """This function gives a response whether the guess is more than, less than or incorrect."""
@@ -43,6 +47,7 @@ def play_game():
 
 restart_game = 'y'
 while restart_game == 'y':
+    clear()
     play_game()
     restart_game = input("Do you want to play the Game again? Typr 'y' for yes and 'n' for no: ")
 print("Thank you for Playing! Have a Nice Day")

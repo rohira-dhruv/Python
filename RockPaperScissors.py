@@ -1,5 +1,6 @@
 import random
 from art import rock,paper,scissors
+
 print("Welcome to the game of Rock Paper Scissors")
 user_choice=int(input("Enter 0 for Rock, 1 for Paper and 2 for Scissors\n"))
 options=[rock,paper,scissors]
