@@ -17,9 +17,9 @@ def get_item(data_list, removal_list):
     return item
 
 
-def compare(item_A, item_B):
+def compare(item_a, item_b):
     """This function checks which item has more followers and returns 'A' or 'B' accordingly."""
-    if item_A['follower_count'] >= item_B['follower_count']:
+    if item_a['follower_count'] >= item_b['follower_count']:
         return 'A'
     else:
         return 'B'
@@ -29,29 +29,23 @@ def game():
     removed_items = []
     end_game = False
     score = 0
-    item_A = get_item(data_higher_lower, removed_items)
+    item_a = get_item(data_higher_lower, removed_items)
     while not end_game:
         print(logo_higher_lower)
-        item_B = get_item(data_higher_lower, removed_items)
-        print(f"Compare A: {item_A['name']}, a {item_A['description']}, from {item_A['country']}")
+        item_b = get_item(data_higher_lower, removed_items)
+        print(f"Compare A: {item_a['name']}, a {item_a['description']}, from {item_a['country']}")
         print(vs)
-        print(f"Against B: {item_B['name']}, a {item_B['description']}, from {item_B['country']}")
+        print(f"Against B: {item_b['name']}, a {item_b['description']}, from {item_b['country']}")
         higher = input("Who has more followers? 'A' or 'B': ").upper()
         clear()
-        if higher == compare(item_A, item_B):
+        if higher == compare(item_a, item_b):
             score += 1
             print(f"\nYou're right! The current score is: {score}")
         else: 
             end_game = True
             print(f"\nSorry that's wrong. Your final score is: {score}")
-        item_A = item_B
+        item_a = item_b
     data_higher_lower.extend(removed_items)
 
 
 game()
-
-
-
-
-
-
