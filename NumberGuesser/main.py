@@ -41,6 +41,7 @@ def play_game():
             no_of_guesses -= 1
             if no_of_guesses == 0:
                 print("You failed to guess the number. Better luck next Time")
+                print(f"The number was {random_number}")
             else:
                 print("Guess Again.")
         elif response == 'C':

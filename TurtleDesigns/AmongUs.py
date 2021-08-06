@@ -48,9 +48,8 @@ def eyes():
     my_turtle.end_fill()
 
 
-my_turtle.pensize(10)
+my_turtle.pensize(8)
 my_turtle.hideturtle()
-# colour = input("What color do you want for the image? ")
 my_screen = Screen()
 colour = my_screen.textinput("Color", "What color do you want for the image? ")
 body(colour)

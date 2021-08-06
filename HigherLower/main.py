@@ -44,6 +44,7 @@ def game():
         else: 
             end_game = True
             print(f"\nSorry that's wrong. Your final score is: {score}")
+            print("Thank you for playing!")
         item_a = item_b
     data_higher_lower.extend(removed_items)
 

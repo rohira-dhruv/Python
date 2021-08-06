@@ -69,7 +69,7 @@ def play_game():
     compare(user_cards, dealer_cards)
 
 
-while input("Do you want to play a game of Blackjack? Type 'y' for yes or 'n' for no: ") == 'y':
+while input("Do you want to play a game of Blackjack? Type 'y' for yes or 'n' for no: ").lower() == 'y':
     clear()
     play_game()
 print("Thank you for playing!")
