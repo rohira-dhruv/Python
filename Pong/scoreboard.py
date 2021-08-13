@@ -15,23 +15,11 @@ class Scoreboard(Turtle):
         self.pensize(5)
         self.score_player1 = 0
         self.score_player2 = 0
-        self.draw_mid_line()
         self.update_scoreboard()
-
-    def draw_mid_line(self):
-        """Draws the halfway line in the center of the screen"""
-        self.setheading(270)
-        self.goto(x=0, y=MAX_HEIGHT)
-        while self.ycor() >= -MAX_HEIGHT:
-            self.pendown()
-            self.forward(15)
-            self.penup()
-            self.forward(15)
 
     def update_scoreboard(self):
         """Updates the scoreboard"""
         self.clear()
-        self.draw_mid_line()
         self.goto(x=-100, y=MAX_HEIGHT - 70)
         self.write(arg=f"{self.score_player1}", align=ALIGNMENT, font=FONT)
         self.goto(x=100, y=MAX_HEIGHT - 70)
